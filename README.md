@@ -1,2 +1,1 @@
-# server_999
-サーバー構築演習
+# server_built

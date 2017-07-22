@@ -147,3 +147,7 @@ def deadline_complete():
     # Linuxのcronに処理を追加する関数を呼び出す
 
     return render_template('deadline_complete.php')
+
+if __name__ == '__main__':
+	app.debug = True
+	app.run()

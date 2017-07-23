@@ -30,7 +30,7 @@ $email = $_POST['email']
 <!-- データベースに接続するための基本情報 -->
 <?php
   $user = 'root';
-  $password = 'password';
+  $db_password = 'password';
   $dbName = 'server';
   $host = 'localhost';
   $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
@@ -38,10 +38,13 @@ $email = $_POST['email']
 <!-- データベースへの接続とその操作 -->
 <?php
   try {
-    $pdo = new PDO($dsn, $user, $password);
+    $pdo = new PDO($dsn, $user, $db_password);
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "insert users(name,password,email) values($name,$password,$email)";
+    echo $name;
+    echo $password;
+    echo $email
+    $sql = "insert users (name,password,email) values ($name,$password,$email)";
     $stm = $pdo -> prepare($sql);
     $stm -> execute();
     $pdo = null;

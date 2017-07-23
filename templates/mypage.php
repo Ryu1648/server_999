@@ -79,34 +79,34 @@ $_SESSION['name'] = $name;
   $user = 'root';
   $password = 'password';
   $dbName = 'server_built';
-  $host = '133.2.176.112';
+  $host = 'localhost';
   $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
 ?>
 <!-- データベースへの接続とその操作 -->
 <?php
   try {
     $pdo = new PDO($dsn, $user, $password);
-    // $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    // $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "データベース{$dbName}に接続しました。","<br>";
-    // $sql = "select * from layout";
-    // $stm = $pdo -> prepare($sql);
-    // $stm -> execute();
-    // $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
-    //
-    // foreach ($result as $row){
-    //   echo $row['number'],"<br>";
-    //   echo $row['title'],"<br>";
-    //   echo $row['deadline'],"<br>";
-    //   echo $row['memo'],"<br>";
-    // }
+    $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "データベース{$dbName}に接続しました。","<br>";
+    $sql = "select * from layout";
+    $stm = $pdo -> prepare($sql);
+    $stm -> execute();
+    $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($result as $row){
+      echo $row['number'],"<br>";
+      echo $row['title'],"<br>";
+      echo $row['deadline'],"<br>";
+      echo $row['memo'],"<br>";
+    }
 
     $pdo = null;
 
   } catch (Exception $e) {
     echo 'エラーがありました。<br>';
     echo $e -> getMessage();
-    exit()
+    exit();
   }
 ?>
 

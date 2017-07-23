@@ -89,8 +89,8 @@ $_SESSION['name'] = $name;
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "データベース{$dbName}に接続しました。","<br>";
-    $sql = "select * from layout which name=$name";
-    $stm = $pdo -> prepare(%sql);
+    $sql = "select * from layout";
+    $stm = $pdo -> prepare($sql);
     $stm -> execute();
     $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
 

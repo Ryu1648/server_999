@@ -25,18 +25,10 @@ session_start();
   <body>
 
 <?php
-$name = $_GET['name'];
-$password = $_GET['password'];
+$name = $_POST['name'];
+$password = $_POST['password'];
 
 $_SESSION['name'] = $name;
-?>
-
-<?php
-$condition = None
-if ($condition) {
-  $url = 'http://133.2.176.112/login_error.php'
-  header("Location:" . $url);
-}
 ?>
 
 

@@ -47,7 +47,7 @@
 
 
       <div class="btn-group btn-group-justified" role="group">
-        <form class="form-inline text-center" action="mypage.php" method="get">
+        <form class="form-inline text-center" action="mypage.php" method="post">
 
           <div class="form-group">
             <label class="sr-only" for="uName">ユーザー名</label>

@@ -83,7 +83,7 @@ $memo = $_GET['memo'];
         <p><br><div class="lead">
           <h4>以下の内容で締め切りを登録しますか？</h4>
         </div>
-        タイトル：<?php echo $title ?>
+        タイトル：<?php echo $title; ?>
         <br>締め切り日時：<?php echo $deadline; ?>
         <br>内容（メモ）：<?php echo $memo; ?>
         </p>

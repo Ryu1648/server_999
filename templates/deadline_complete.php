@@ -36,6 +36,42 @@ $deadline = $_GET['deadline'];
 $memo = $_GET['memo'];
 ?>
 
+
+<!-- データベースに接続するための基本情報 -->
+<?php
+  $user = 'tanai';
+  $password = 'password';
+  $dbName = 'server_built';
+  $host = '133.2.176.112';
+  $dsn = 'mysql:host={$host};dbname={$dbName};charset=utf8';
+?>
+<!-- データベースへの接続とその操作 -->
+<?php
+  try {
+    $pdo = new PDO($dsn, $user, $password);
+    $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "データベース{$dbName}に接続しました。","<br>";
+    // 実行するSQL
+    $sql = "insert layout(name,title,deadline,memo) values($name,$title,$deadline,$memo)";
+    $stm = $pdo -> prepare(%sql);
+    $stm -> execute();
+
+    foreach ($result as $row){
+      echo $row['number'],"<br>";
+      echo $row['title'],"<br>";
+      echo $row['deadline'],"<br>";
+      echo $row['memo'],"<br>";
+    }
+
+  } catch (Exception $e) {
+    echo 'エラーがありました。<br>';
+    echo $e -> getMessage();
+    exit()
+  }
+?>
+
+
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -79,22 +115,12 @@ $memo = $_GET['memo'];
         <p><br><div class="lead">
           <h4>以下の内容で締め切りを登録しました。</h4>
         </div>
-        タイトル：{{ title }}
-        <br>締め切り日時：{{ deadline }}
-        <br>内容（メモ）：{{ memo }} <!--もっと小さい文字でもいいかも、できればだけど。半透明にするとか。-->
-        </p>
+        タイトル：<?php echo $title; ?>
+        <br>締め切り日時：<?php echo $deadline; ?>
+        <br>内容（メモ）：<?php echo $memo; ?>
+      </p><br><br>
 
         <br>
-
-        <p><div class="lead">
-          <h4>以下の日時で通知します。</h4>
-        </div>
-        通知日時：
-        {% for value in alert %}
-          {{ value }},
-        {% endfor %} <!--/*何回も通知する可能性*/ -->
-        </p>
-
       </div>
     </div>
 

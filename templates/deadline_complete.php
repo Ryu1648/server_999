@@ -33,6 +33,7 @@ $name = $_SESSION['name'];
 <?php
 $title = $_GET['title'];
 $deadline = $_GET['deadline'];
+$alert = $_GET['alert'];
 $memo = $_GET['memo'];
 ?>
 

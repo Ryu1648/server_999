@@ -75,27 +75,27 @@ if (!empty($_POST['deadline_title']) and !empty($_POST['deadline_deadline']) and
   </div>
 </nav>
 
-
+<br>
   <div class="container-fluid" style="max-width: 1000px;">
     <div class="text-center">
       <div class="jumbotron">
         <h2>入力内容エラー</h2>
-      </div>
+      </div><br>
       <h4>入力情報に不足か誤りがあったため、登録できませんでした。<br>もう一度やり直してください。</h4>
 
-<br>
+<br><br>
 
     </div>
       <div class="row">
           <div class="col-xs-6" style="padding-right:0;">
             <form action="mypage.php" method="get">
-              <button href="#" class="btn btn-success text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">マイページに戻る</button>
+              <button href="#" class="btn btn-success text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">マイページへ</button>
             </form>
           </div>
 
           <div class="col-xs-6" style="padding-left:0;">
             <form action="deadline.php" method="get">
-              <button href="#" class="btn btn-warning text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">締め切りを登録</button>
+              <button href="#" class="btn btn-warning text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">再入力する</button>
             </form>
           </div>
         </div>

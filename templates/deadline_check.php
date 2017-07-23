@@ -118,6 +118,7 @@ $memo = $_GET['memo'];
             <form action="deadline_complete.php" method="get">
               <input type="hidden" name="title" value="<?php echo $title; ?>">
               <input type="hidden" name="deadline" value="<?php echo $deadline; ?>">
+              <input type="hidden" name="alert" value="<?php echo $alert; ?>">
               <input type="hidden" name="memo" value="<?php echo $memo; ?>">
               <button href="#" class="btn btn-success text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">登録</button>
             </form>

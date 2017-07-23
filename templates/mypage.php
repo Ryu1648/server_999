@@ -32,8 +32,8 @@ $_SESSION['name'] = $name;
 ?>
 
 <?php
-condition = Null
-if (condition) {
+$condition = None
+if ($condition) {
   $url = 'http://133.2.176.112/login_error.php'
   header("Location:" . $url);
 }

@@ -76,11 +76,11 @@ $_SESSION['name'] = $name;
 <!-- 以下にphpによるループを記述 -->
 <!-- データベースに接続するための基本情報 -->
 <?php
-  $user = 'tanai';
+  $user = 'root';
   $password = 'password';
   $dbName = 'server_built';
   $host = '133.2.176.112';
-  $dsn = 'mysql:host={$host};dbname={$dbName};charset=utf8';
+  $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
 ?>
 <!-- データベースへの接続とその操作 -->
 <?php

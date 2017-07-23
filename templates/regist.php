@@ -36,7 +36,7 @@
 
 
     <div class="container" style="max-width:800px">
-      <form action="/regist_complete" method="get">
+      <form action="regist_complete.php" method="get">
         <div class="input-group input-group-lg">
           <span class="input-group-addon" id="sizing-addon1">1</span>
           <input type="text" name="name" class="form-control" placeholder="名前" aria-describedby="sizing-addon1">
@@ -60,7 +60,7 @@
         </div>
       </form>
 
-      <form action="/mypage">
+      <form action="mypage.php">
         <div class="row">
           <!-- <div class="col-xs-6"> -->
             <button type="submit" class="btn btn-success btn-lg btn-block" style="font-size:25px;height:70px;border-radius:0;">

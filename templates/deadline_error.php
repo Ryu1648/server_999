@@ -29,23 +29,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand active" href="/mypage">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
+      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
 
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="mypage"><span class="glyphicon glyphicon-list-alt"></span>マイページ</a></li>
-        <li><a href="/deadline"><span class="glyphicon glyphicon-pencil"></span> 締切追加</a></li>
+        <li><a href="mypage.php"><span class="glyphicon glyphicon-list-alt"></span>マイページ</a></li>
+        <li><a href="deadline.php"><span class="glyphicon glyphicon-pencil"></span> 締切追加</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> アカウント <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/mypage">マイページ</a></li>
-            <li><a href="calendar">カレンダー</a></li>
+            <li><a href="mypage.php">マイページ</a></li>
+            <li><a href="calendar.php">カレンダー</a></li>
             <!-- <li><a href="change_user">ユーザ変更</a></li> -->
             <li role="separator" class="divider"></li>
-            <li><a href="/logout">ログアウト</a></li>
+            <li><a href="logout.php">ログアウト</a></li>
           </ul>
         </li>
       </ul>
@@ -66,13 +66,13 @@
     </div>
       <div class="row">
           <div class="col-xs-6" style="padding-right:0;">
-            <form action="/mypage" method="get">
+            <form action="mypage.php" method="get">
               <button href="#" class="btn btn-success text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">マイページに戻る</button>
             </form>
           </div>
 
           <div class="col-xs-6" style="padding-left:0;">
-            <form action="/deadline" method="get">
+            <form action="deadline.php" method="get">
               <button href="#" class="btn btn-warning text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">締め切りを登録</button>
             </form>
           </div>

@@ -34,7 +34,7 @@
 
     <div class="container text-center" style="max-width:800px">
       <div class="row">
-        <form action="/mypage" method="get">
+        <form action="mypage.php" method="get">
           <button type="submit" class="btn btn-success btn-lg btn-block" style="font-size:25px;height:70px;border-radius:0;">
             マイページへ</button>
         </form>

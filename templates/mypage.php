@@ -29,22 +29,22 @@
         <span class="icon-bar"></span>
       </button>
       <!-- このaタグはFlaskでどこに飛ぶのか？ -->
-      <a class="navbar-brand active" href="/mypage">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
+      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
 
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/mypage"><span class="glyphicon glyphicon-list-alt"></span>マイページ</a></li>
-        <li><a href="/deadline"><span class="glyphicon glyphicon-pencil"></span> 締切追加</a></li>
+        <li><a href="mypage.php"><span class="glyphicon glyphicon-list-alt"></span>マイページ</a></li>
+        <li><a href="deadline.php"><span class="glyphicon glyphicon-pencil"></span> 締切追加</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> アカウント <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/mypage">マイページ</a></li>
-            <li><a href="calendar">カレンダー</a></li>
+            <li><a href="mypage.php">マイページ</a></li>
+            <li><a href="calendar.php">カレンダー</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="/logout">ログアウト</a></li>
+            <li><a href="logout.php">ログアウト</a></li>
           </ul>
         </li>
       </ul>
@@ -105,7 +105,7 @@
 
       <div class="container-fluid">
         <div class="row">
-          <form action="/deadline" method="get">
+          <form action="deadline.php" method="get">
             <button type="submit"  class="btn btn-warning col-xs-offset-1 col-xs-10 col-xs-offset-1" role="button" name="mypage_to_deadline" style="font-size:30px; position:fixed; bottom:0; height:100px">締め切り追加</button>
           </form>
         </div>

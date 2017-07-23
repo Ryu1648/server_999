@@ -34,7 +34,7 @@
 
       <div class="row">
           <div class="col-xs-12" style="padding-right:0;">
-            <form action="/mypage" method="post">
+            <form action="mypage.php" method="post">
               <button type="submit" class="btn btn-success text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">ログイン画面へ</button>
             </form>
           </div>

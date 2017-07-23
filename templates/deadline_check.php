@@ -29,23 +29,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand active" href="/mypage">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
+      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
 
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="mypage"><span class="glyphicon glyphicon-list-alt"></span>マイページ</a></li>
-        <li><a href="/deadline"><span class="glyphicon glyphicon-pencil"></span> 締切追加</a></li>
+        <li><a href="mypage.php"><span class="glyphicon glyphicon-list-alt"></span>マイページ</a></li>
+        <li><a href="deadline.php"><span class="glyphicon glyphicon-pencil"></span> 締切追加</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> アカウント <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/mypage">マイページ</a></li>
-            <li><a href="calendar">カレンダー</a></li>
+            <li><a href="mypage.php">マイページ</a></li>
+            <li><a href="calendar.php">カレンダー</a></li>
             <!-- <li><a href="change_user">ユーザ変更</a></li> -->
             <li role="separator" class="divider"></li>
-            <li><a href="/logout">ログアウト</a></li>
+            <li><a href="logout.php">ログアウト</a></li>
           </ul>
         </li>
       </ul>
@@ -115,13 +115,13 @@
     <div class="container-fluid" style="max-width: 1000px;">
       <div class="row">
           <div class="col-xs-6" style="padding-right:0;">
-            <form action="/deadline">
+            <form action="deadline.php">
               <button href="#" class="btn btn-warning text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">修正</button>
             </form>
           </div>
 
           <div class="col-xs-6" style="padding-left:0;">
-            <form action="/deadline_complete" method="get">
+            <form action="deadline_complete.php" method="get">
               <input type="hidden" name="title" value="{% if title %}{{ title }}{% endif %}">
               <input type="hidden" name="deadline" value="{% if deadline %}{{ deadline }}{% endif %}">
               <input type="hidden" name="memo" value="{% if memo %}{{ memo }}{% endif %}">

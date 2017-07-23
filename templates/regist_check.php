@@ -41,13 +41,13 @@
     <div class="container" style="max-width:1000px">
       <div class="row">
         <div class="col-xs-6" style="padding:0;">
-          <form action="/regist" method="get">
+          <form action="regist.php" method="get">
             <button type="deadline_add" class="btn btn-warning btn-lg btn-block" style="font-size:25px;height:70px;border-radius:0;">
               修正する</button>
           </form>
         </div>
         <div class="col-xs-6" style="padding:0;">
-          <form action="/regist_complete" method="get">
+          <form action="regist_complete.php" method="get">
             <input type="hidden" name="name" value="{{ name }}">
             <input type="hidden" name="password" value="{{ password }}">
             <input type="hidden" name="email" value="{{ email }}">
@@ -63,6 +63,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="bootstrap/static/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -27,7 +27,7 @@
     <div class="container" style="max-width: 800px;">
       <div class="row">
         <div class="col-xs-12" style="padding:0;">
-          <form action="/" method="get">
+          <form action="index.php" method="get">
             <button type="submit" class="btn btn-warning btn-lg btn-block" style="font-size:25px;height:70px;border-radius:0;">
               ログイン画面へ</button>
           </form>

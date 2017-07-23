@@ -47,7 +47,7 @@
 
 
       <div class="btn-group btn-group-justified" role="group">
-        <form class="form-inline text-center" action="login_error.html" method="get">
+        <form class="form-inline text-center" action="login_error.php" method="get">
 
           <div class="form-group">
             <label class="sr-only" for="uName">ユーザー名</label>
@@ -67,7 +67,7 @@
       <br><br>
 
       <div class="btn-group btn-group-justified" role="group">
-        <form class="form-inline text-right" action="/regist">
+        <form class="form-inline text-right" action="regist.php">
           <button type="submit" class="btn btn-default btn-group-justified" role="button" onclick="sample.html">新規登録</button>
         </form>
 

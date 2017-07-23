@@ -27,7 +27,7 @@
       <div class="jumbotron text-center center-block" style="max-width:1000px">
         <div class="row">
           <h2>
-            Welcome to Deadline Management
+            Deadline Management
           </h2>
           <br>
           <p>

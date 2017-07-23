@@ -94,7 +94,12 @@ $memo = $_GET['memo'];
           <h4>以下の日時で通知します。</h4>
         </div>
         通知日時：
-        <?php echo $alert[]; ?>
+        <!-- 配列処理　あとで改善する -->
+        <?php
+        foreach ($alert as $key => $value) {
+          echo "<li>", $key, ": ", $value, "</li>\n";
+        }
+        ?>
 
         <!-- {% for value in alert %}
           {{ value }},

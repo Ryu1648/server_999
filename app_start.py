@@ -11,9 +11,9 @@ import datetime
 connection = pymysql.connect(
     host='localhost',
     user='zemi_player',
-    password='zemipass',
+    # password='zemipass',
     # 大学のサーバー内のデータベースにアクセスする場合のパスワード
-    # password='password',
+    password='password',
     db='server_built',
     charset='utf8',
     )

@@ -78,13 +78,6 @@ $name = $_SESSION['name'];
           </div>
           <br><br>
 
-            <!--おそらく選択式になる-->
-
-          <!-- このフォームから送信されるのは
-          deadline_title
-          deadline_deadline
-          deadline_alert
-          deadline_memo -->
         <form action="deadline_check.php" method="get">
           <div class="form-group">
             <label class="text-left">タイトル</label>
@@ -97,7 +90,6 @@ $name = $_SESSION['name'];
           </div>
 
 
-<!-- メール通知日時 開始-->
 <br>
 <div class="row">
   <div class="form-group">
@@ -114,40 +106,13 @@ $name = $_SESSION['name'];
   </div>
 </div>
 
-                <!-- <br>
-                <div class="row">
-                  <div class="input-group form-inline text-center">
-                    <div class="center-block">
-                    <div class="form-block" id="form_block[0]" style="padding:5px;">
-
-                      <span class="close glyphicon glyphicon-minus" title="Close" style="display: none;" ria-hidden="true"></span>
-                        <label class="text-left">メール通知日時</label>
-                        <select name="deadline_alert_1">
-                          <option value="1" selected>選択してください</option>
-                          <option value="1">1週間前</option>
-                          <option value="2">3日前</option>
-                          <option value="3">1日前</option>
-                          <option value="4">12時間前</option>
-                          <option value="5">2時間前</option>
-                        </select>
-
-                    </div>
-
-                    <div class="form-block" id="form_add">
-                      <span class="add glyphicon glyphicon-plus" title="Add" aria-hidden="true"></span>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-
-<!-- メール通知日時 終了 -->
 
               <br>
               <div class="row">
                 <div class="form-group col-xs-12">
                   <label>メモ</label><br>
                   <!-- <input type="textarea" class="form-control" name="deadline_memo"> -->
-                  <textarea class="form-control" name="deadline_memo" rows="5"></textarea>
+                  <textarea class="form-control" name="memo" rows="5"></textarea>
                 </div>
               </div>
 
@@ -169,79 +134,6 @@ $name = $_SESSION['name'];
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/static/js/bootstrap.min.js"></script>
 
-    <!-- <script type="text/javascript">
-      var now = new Date();
-      var year = now.getFullYear();
-      var month = now.getMonth();
-      var date = now.getDate();
-    </script>
-
-    <script type="text/javascript">
-    $(function () {
-    var frm_cnt = 0;
-
-
-      $(document).on('click', '.add', function(){
-        if (frm_cnt <= 1) {
-          var original = $('#form_block\\[' + frm_cnt + '\\]');
-          var originCnt = frm_cnt;
-          var originVal = $("input[name='sex\\[" + frm_cnt + "\\]']:checked").val();
-
-
-            frm_cnt++;
-        }
-
-
-
-      original
-          .clone()
-          .hide()
-          .insertAfter(original)
-          .attr('id', 'form_block[' + frm_cnt + ']') // クローンのid属性を変更。
-          .find("input[type='radio'][checked]").prop('checked', true)
-          .end() // 一度適用する
-          .find('input, textarea').each(function(idx, obj) {
-              $(obj).attr({
-                  id: $(obj).attr('id').replace(/\[[0-9]\]+$/, '[' + frm_cnt + ']'),
-                  name: $(obj).attr('name').replace(/\[[0-9]\]+$/, '[' + frm_cnt + ']')
-              });
-              if ($(obj).attr('type') == 'text') {
-                $(obj).val('');
-              }
-          });
-
-      // clone取得
-      var clone = $('#form_block\\[' + frm_cnt + '\\]');
-      clone.children('span.close').show();
-      clone.slideDown('slow');
-
-      // originalラジオボタン復元
-      original.find("input[name='sex\\[" + originCnt + "\\]'][value='" + originVal + "']").prop('checked', true);
-    });
-
-    $(document).on('click', '.close', function(){
-        var removeObj = $(this).parent();
-        removeObj.fadeOut('fast', function() {
-            removeObj.remove();
-            // 番号振り直し
-            frm_cnt = 0;
-            $(".form-block[id^='form_block']").each(function(index, formObj) {
-                if ($(formObj).attr('id') != 'form_block[0]') {
-                    frm_cnt++;
-                    $(formObj)
-                        .attr('id', 'form_block[' + frm_cnt + ']') // id属性を変更。
-                        .find('input, textarea').each(function(idx, obj) {
-                            $(obj).attr({
-                                id: $(obj).attr('id').replace(/\[[0-9]\]+$/, '[' + frm_cnt + ']'),
-                                name: $(obj).attr('name').replace(/\[[0-9]\]+$/, '[' + frm_cnt + ']')
-                            });
-                        });
-                    }
-            });
-        });
-    });
-});
-    </script> -->
 
   </body>
 </html>

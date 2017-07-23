@@ -86,20 +86,22 @@ $_SESSION['name'] = $name;
 <?php
   try {
     $pdo = new PDO($dsn, $user, $password);
-    $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "データベース{$dbName}に接続しました。","<br>";
-    $sql = "select * from layout";
-    $stm = $pdo -> prepare($sql);
-    $stm -> execute();
-    $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
+    // $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    // $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "データベース{$dbName}に接続しました。","<br>";
+    // $sql = "select * from layout";
+    // $stm = $pdo -> prepare($sql);
+    // $stm -> execute();
+    // $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($result as $row){
-      echo $row['number'],"<br>";
-      echo $row['title'],"<br>";
-      echo $row['deadline'],"<br>";
-      echo $row['memo'],"<br>";
-    }
+    // foreach ($result as $row){
+    //   echo $row['number'],"<br>";
+    //   echo $row['title'],"<br>";
+    //   echo $row['deadline'],"<br>";
+    //   echo $row['memo'],"<br>";
+    // }
+
+    $pdo = null;
 
   } catch (Exception $e) {
     echo 'エラーがありました。<br>';

@@ -44,7 +44,8 @@ $email = $_POST['email']
     echo $name,"<br>";
     echo $password,"<br>";
     echo $email,"<br>";
-    $sql = "insert users (name,password,email) values ($name,$password,$email)";
+    // $email = 'test_code';
+    $sql = "insert users (name,password,email) values ('$name','$password','$email')";
     $stm = $pdo -> prepare($sql);
     $stm -> execute();
     $pdo = null;

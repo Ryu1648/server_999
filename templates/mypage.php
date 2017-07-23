@@ -69,9 +69,16 @@ $_SESSION['name'] = $name;
 
   <div class="container-fluid" style="max-width: 1000px;">
     <div class="jumbotron" style="background-color:brown; color: white;">
-      <h2>ここは"{{ name }}"さんのマイページです</h2>
+      <h2>ここは"<?php echo $name ?>"さんのマイページです</h2>
     </div>
   </div>
+
+<!-- 以下にphpによるループを記述 -->
+
+
+
+
+
 
   <!-- <div class="container-fluid" style="max-width: 1000px;">
     <section>

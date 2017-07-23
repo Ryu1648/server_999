@@ -30,6 +30,11 @@ session_start();
 $name = $_SESSION['name'];
 ?>
 
+<?php
+$title = $_GET['title'];
+$deadline = $_GET['deadline'];
+$memo = $_GET['memo'];
+?>
 
     <nav class="navbar navbar-default">
   <div class="container-fluid">

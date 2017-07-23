@@ -37,14 +37,6 @@ $memo = $_GET['memo'];
 ?>
 
 
-<?php
-condition = Null
-if (condition) {
-  $url = 'http://133.2.176.112/deadline_error.php'
-  header("Location:" . $url);
-}
-?>
-
 
     <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -91,9 +83,9 @@ if (condition) {
         <p><br><div class="lead">
           <h4>以下の内容で締め切りを登録しますか？</h4>
         </div>
-        タイトル：{{ title }}
-        <br>締め切り日時：{{ deadline }}
-        <br>内容（メモ）：{{ memo }}
+        タイトル：<?php echo $title ?>
+        <br>締め切り日時：<?php echo $deadline; ?>
+        <br>内容（メモ）：<?php echo $memo; ?>
         </p>
 
         <br>
@@ -102,31 +94,7 @@ if (condition) {
           <h4>以下の日時で通知します。</h4>
         </div>
         通知日時：
-        <br>
-        <!-- テスト処理 -->
-        {% if alert1 %}
-          {{ alert1 }}
-        {% endif %}
-        <br>
-
-        {% if alert2 %}
-          {{ alert2 }}
-        {% endif %}
-        <br>
-
-        {% if alert3 %}
-          {{ alert3 }}
-        {% endif %}
-        <br>
-
-        {% if alert4 %}
-          {{ alert4 }}
-        {% endif %}
-        <br>
-
-        {% if alert5 %}
-          {{ alert5 }}
-        {% endif %}
+        <?php echo $alert; ?>
 
         <!-- {% for value in alert %}
           {{ value }},
@@ -148,9 +116,9 @@ if (condition) {
 
           <div class="col-xs-6" style="padding-left:0;">
             <form action="deadline_complete.php" method="get">
-              <input type="hidden" name="title" value="{% if title %}{{ title }}{% endif %}">
-              <input type="hidden" name="deadline" value="{% if deadline %}{{ deadline }}{% endif %}">
-              <input type="hidden" name="memo" value="{% if memo %}{{ memo }}{% endif %}">
+              <input type="hidden" name="title" value="<?php echo $title; ?>">
+              <input type="hidden" name="deadline" value="<?php echo $deadline; ?>">
+              <input type="hidden" name="memo" value="<?php echo $memo; ?>">
               <button href="#" class="btn btn-success text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">登録</button>
             </form>
           </div>

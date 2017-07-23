@@ -91,11 +91,12 @@ else {
     $pdo = new PDO($dsn, $user, $password);
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "select * from layout where name='$name'";
+    $sql = "select * from layout where name='$name' order by deadline";
     $stm = $pdo -> prepare($sql);
     $stm -> execute();
     $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
 
+    // レイアウトの修正
     foreach ($result as $row){
       echo $row['title'],"<br>";
       echo $row['deadline'],"<br>";

@@ -56,13 +56,6 @@ $memo = $_GET['memo'];
     $stm = $pdo -> prepare($sql);
     $stm -> execute();
 
-    foreach ($result as $row){
-      echo $row['number'],"<br>";
-      echo $row['title'],"<br>";
-      echo $row['deadline'],"<br>";
-      echo $row['memo'],"<br>";
-    }
-
   } catch (Exception $e) {
     echo 'エラーがありました。<br>';
     echo $e -> getMessage();

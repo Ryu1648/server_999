@@ -21,9 +21,9 @@
   <body>
 
 <?php
-$name = $_GET['name'];
-$password = $_GET['password'];
-$email = $_GET['email']
+$name = $_POST['name'];
+$password = $_POST['password'];
+$email = $_POST['email']
 ?>
 
 

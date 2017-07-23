@@ -54,7 +54,7 @@ $email = $_POST['email'];
           </form>
         </div>
         <div class="col-xs-6" style="padding:0;">
-          <form action="regist_complete.php" method="get">
+          <form action="regist_complete.php" method="post">
             <input type="hidden" name="name" value="<?php echo $name; ?>">
             <input type="hidden" name="password" value="<?php echo $password; ?>">
             <input type="hidden" name="email" value="<?php echo $email; ?>">

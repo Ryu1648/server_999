@@ -36,7 +36,7 @@
 
 
     <div class="container" style="max-width:800px">
-      <form action="regist_check.php" method="get">
+      <form action="regist_check.php" method="post">
         <div class="input-group input-group-lg">
           <span class="input-group-addon" id="sizing-addon1">1</span>
           <input type="text" name="name" class="form-control" placeholder="名前" aria-describedby="sizing-addon1">

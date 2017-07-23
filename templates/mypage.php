@@ -25,10 +25,11 @@ session_start();
   <body>
 
 <?php
-$name = $_POST['name'];
-$password = $_POST['password'];
-
-$_SESSION['name'] = $name;
+if (isset($_POST['name']) and isset($_POST['password'])){
+  $name = $_POST['name'];
+  $password = $_POST['password'];
+  $_SESSION['name'] = $name;
+}
 ?>
 
 
@@ -73,7 +74,6 @@ $_SESSION['name'] = $name;
     </div>
   </div>
 
-<!-- 以下にphpによるループを記述 -->
 <!-- データベースに接続するための基本情報 -->
 <?php
   $user = 'root';
@@ -88,14 +88,12 @@ $_SESSION['name'] = $name;
     $pdo = new PDO($dsn, $user, $password);
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "データベース{$dbName}に接続しました。","<br>";
     $sql = "select * from layout";
     $stm = $pdo -> prepare($sql);
     $stm -> execute();
     $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($result as $row){
-      echo $row['number'],"<br>";
       echo $row['title'],"<br>";
       echo $row['deadline'],"<br>";
       echo $row['memo'],"<br>";

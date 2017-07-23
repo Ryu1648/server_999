@@ -21,18 +21,9 @@
   <body>
 
 <?php
-$name = $_GET['name'];
-$password = $_GET['password'];
-$email = $_GET['email'];
-?>
-
-
-<?php
-condition = Null
-if (condition) {
-  $url = 'http://133.2.176.112/regist_error.php'
-  header("Location:" . $url);
-}
+$name = $_POST['name'];
+$password = $_POST['password'];
+$email = $_POST['email'];
 ?>
 
 

@@ -31,7 +31,7 @@ if (!isset($_SESSION['name'])){
   $_SESSION['name'] = $name;
 }
 else {
-  $name = $_SESSION['name']
+  $name = $_SESSION['name'];
 }
 ?>
 

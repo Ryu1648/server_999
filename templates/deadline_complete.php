@@ -44,7 +44,7 @@ $memo = $_GET['memo'];
   $password = 'password';
   $dbName = 'server';
   $host = 'localhost';
-  $dsn = 'mysql:host={$host};dbname={$dbName};charset=utf8';
+  $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
 ?>
 <!-- データベースへの接続とその操作 -->
 <?php
@@ -66,7 +66,7 @@ $memo = $_GET['memo'];
   } catch (Exception $e) {
     echo 'エラーがありました。<br>';
     echo $e -> getMessage();
-    exit()
+    exit();
   }
 ?>
 

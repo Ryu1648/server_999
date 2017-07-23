@@ -95,6 +95,7 @@ $memo = $_GET['memo'];
         </div>
         通知日時：
         <!-- 配列処理　あとで改善する -->
+        <!-- 処理内容に間違いあり -->
         <?php
         foreach ($alert as $key => $value) {
           echo "<li>", $key, ": ", $value, "</li>\n";

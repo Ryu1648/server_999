@@ -20,6 +20,19 @@
   </head>
   <body>
 
+    <?php
+    if (!empty($_POST['name']) and !empty($_POST['password']) and !empty($_POST['email'])) {
+      $name = $_POST['name'];
+      $password = $_POST['password'];
+      $email = $_POST['email'];
+      $url = "http://133.2.176.112/regist_check.php?name=$name&password=$password&email=$email";
+      header('Location:'.$url);
+      exit();
+    }
+    ?>
+
+
+
     <br><br>
 
     <div class="container text-center" style="max-width:1000px">

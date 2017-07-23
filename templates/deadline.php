@@ -8,8 +8,8 @@
     <title>deadline</title>
 
     <!-- Bootstrap -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/css/bootstrap.style.css" rel="stylesheet">
+    <link href="bootstrap/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/static/css/bootstrap.style.css" rel="stylesheet">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script> -->
 
@@ -159,7 +159,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="bootstrap/static/js/bootstrap.min.js"></script>
 
     <!-- <script type="text/javascript">
       var now = new Date();

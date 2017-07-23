@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>logout</title>
 
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/css/bootstrap.style.css" rel="stylesheet">
+    <link href="bootstrap/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/static/css/bootstrap.style.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="bootstrap/static/js/bootstrap.min.js"></script>
 
   </head>
   <body style="background:#fff">

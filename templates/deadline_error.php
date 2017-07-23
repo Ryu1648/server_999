@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>dealine_complete</title>
+    <title>deadline_error</title>
 
     <!-- Bootstrap -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/css/bootstrap.style.css" rel="stylesheet">
-    <link href="../static/css/bootstrap-add.css" rel="stylesheet">
+    <link href="bootstrap/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/static/css/bootstrap.style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,8 +18,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
-
   <body>
 
     <nav class="navbar navbar-default">
@@ -57,74 +54,34 @@
 </nav>
 
 
-
-
-    <div class="container-fluid text-center" style="max-width:1000px;">
+  <div class="container-fluid" style="max-width: 1000px;">
+    <div class="text-center">
       <div class="jumbotron">
-        <h1>Accepted!!</h1>
+        <h2>入力内容エラー</h2>
       </div>
-        <p><br><div class="lead">
-          <h4>以下の内容で締め切りを登録しました。</h4>
-        </div>
-        タイトル：{{ title }}
-        <br>締め切り日時：{{ deadline }}
-        <br>内容（メモ）：{{ memo }} <!--もっと小さい文字でもいいかも、できればだけど。半透明にするとか。-->
-        </p>
+      <h4>入力情報に不足か誤りがあったため、登録できませんでした。<br>もう一度やり直してください。</h4>
 
-        <br>
+<br>
 
-        <p><div class="lead">
-          <h4>以下の日時で通知します。</h4>
-        </div>
-        通知日時：
-        {% for value in alert %}
-          {{ value }},
-        {% endfor %} <!--/*何回も通知する可能性*/ -->
-        </p>
-
-      </div>
     </div>
-
-    <br><br>
-
-    <div class="container-fluid" style="max-width: 1000px;">
       <div class="row">
           <div class="col-xs-6" style="padding-right:0;">
-            <form action="/deadline" method="get">
-              <button type="submit" class="btn btn-warning text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">締め切りをさらに追加</button>
-            </form>
-          </div>
-          <div class="col-xs-6" style="padding-left:0;">
             <form action="/mypage" method="get">
               <button href="#" class="btn btn-success text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">マイページに戻る</button>
             </form>
           </div>
 
-
+          <div class="col-xs-6" style="padding-left:0;">
+            <form action="/deadline" method="get">
+              <button href="#" class="btn btn-warning text-center" role="button" style="width:100%; height: 70px; font-size: 100%;">締め切りを登録</button>
+            </form>
+          </div>
         </div>
 
 
-
-
-
-
-
-
-        <!-- <div class="container">
-          <div class="row">
-            <form action="/deadline" method="post" action="/deadline">
-              <button type="submit"  class="btn btn-default col-xs-offset-1 col-xs-10 col-xs-offset-1" role="button" name="mypage_to_deadline" style="position:fixed; bottom:0;">締め切り予約</button>
-            </form>
-          </div>
-        </div> -->
-
-
-
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="../static/js/bootstrap.min.js"></script>
-
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/static/js/bootstrap.min.js"></script>
   </body>
 </html>

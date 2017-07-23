@@ -30,8 +30,8 @@ $name = $_SESSION['name'];
 
 
 <?php
-$title = $_GET['deadline_title'];
-$deadline = $_GET['deadline_deadline'];
+$title = $_GET['title'];
+$deadline = $_GET['deadline'];
 $alert = $_GET['alert'];
 $memo = $_GET['memo'];
 ?>
@@ -94,7 +94,7 @@ $memo = $_GET['memo'];
           <h4>以下の日時で通知します。</h4>
         </div>
         通知日時：
-        <?php echo $alert; ?>
+        <?php echo $alert[]; ?>
 
         <!-- {% for value in alert %}
           {{ value }},

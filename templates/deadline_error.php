@@ -28,6 +28,19 @@ session_start();
 $name = $_SESSION['name'];
 ?>
 
+<?php
+if (!empty($_POST['deadline_title']) and !empty($_POST['deadline_deadline']) and !empty($_POST['memo'])) {
+  $title = $_POST['deadline_title'];
+  $deadline = $_POST['deadline_deadline'];
+  $alert = $_POST['alert'];
+  $memo = $_POST['memo'];
+  $url = "http://133.2.176.112/deadline_check.php?title=$title&deadline=$deadline&alert=$alert&memo=$memo";
+  header('Location:'.$url);
+  exit();
+}
+?>
+
+
 
     <nav class="navbar navbar-default">
   <div class="container-fluid">

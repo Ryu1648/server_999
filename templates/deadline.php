@@ -78,7 +78,7 @@ $name = $_SESSION['name'];
           </div>
           <br><br>
 
-        <form action="deadline_check.php" method="get">
+        <form action="deadline_error.php" method="post">
           <div class="form-group">
             <label class="text-left">タイトル</label>
             <input type="text" class="form-control" name="deadline_title">

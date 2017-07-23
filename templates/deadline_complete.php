@@ -35,13 +35,6 @@ $title = $_GET['title'];
 $deadline = $_GET['deadline'];
 $memo = $_GET['memo'];
 ?>
-<?php
-if (empty($title) or empty($deadline) or empty($memo)) {
-  $url = "http://133.2.176.112/deadline_error.php";
-  header('Location:'.$url);
-  exit();
-}
-?>
 
 
 <!-- データベースに接続するための基本情報 -->
@@ -59,7 +52,7 @@ if (empty($title) or empty($deadline) or empty($memo)) {
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "insert layout(name,title,deadline,memo) values('$name','$title','$deadline','$memo')";
-    $stm = $pdo -> prepare(%sql);
+    $stm = $pdo -> prepare($sql);
     $stm -> execute();
 
     foreach ($result as $row){

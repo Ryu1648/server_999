@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -20,6 +24,28 @@
   </head>
   <body>
 
+<?php
+$name = $_SESSION['name'];
+?>
+
+
+<?php
+$title = $_GET['deadline_title'];
+$deadline = $_GET['deadline_deadline'];
+$alert = $_GET['alert'];
+$memo = $_GET['memo'];
+?>
+
+
+<?php
+condition = Null
+if (condition) {
+  $url = 'http://133.2.176.112/deadline_error.php'
+  header("Location:" . $url);
+}
+?>
+
+
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -29,7 +55,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
+      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "<?php echo $name; ?>"さん</a>
 
     </div>
 

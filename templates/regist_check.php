@@ -20,6 +20,22 @@
   </head>
   <body>
 
+<?php
+$name = $_GET['name'];
+$password = $_GET['password'];
+$email = $_GET['email'];
+?>
+
+
+<?php
+condition = Null
+if (condition) {
+  $url = 'http://133.2.176.112/regist_error.php'
+  header("Location:" . $url);
+}
+?>
+
+
     <br><br>
 
     <div class="container text-center" style="max-width:1000px">
@@ -29,9 +45,9 @@
         </div>
       </div>
       <div class="row">
-        <h3>{{ name }}</h3>
-        <h3>{{ password }}</h3>
-        <h3>{{ email }}</h3>
+        <h3><?php echo $name; ?></h3>
+        <h3><?php echo $password; ?></h3>
+        <h3><?php echo $email; ?></h3>
       </div>
     </div>
 
@@ -48,9 +64,9 @@
         </div>
         <div class="col-xs-6" style="padding:0;">
           <form action="regist_complete.php" method="get">
-            <input type="hidden" name="name" value="{{ name }}">
-            <input type="hidden" name="password" value="{{ password }}">
-            <input type="hidden" name="email" value="{{ email }}">
+            <input type="hidden" name="name" value="<?php echo $name; ?>">
+            <input type="hidden" name="password" value="<?php echo $password; ?>">
+            <input type="hidden" name="email" value="<?php echo $email; ?>">
             <button type="submit" class="btn btn-success btn-lg btn-block" style="font-size:25px;height:70px;border-radius:0;">
               登録する</button>
           </form>

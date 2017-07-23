@@ -20,13 +20,19 @@
   </head>
   <body>
 
+<?php
+$name = $_GET['name'];
+$password = $_GET['password'];
+$email = $_GET['email']
+?>
+
     <br><br><br><br><br>
 
     <div class="container text-center" style="max-width:800px">
       <div class="row">
         <div class="jumbotron">
           <div class="lead">
-            <h2 class="text-center">{{ name }}さん<br><br>ようこそ!</h2><br>
+            <h2 class="text-center"><?php echo $name; ?><br><br>ようこそ!</h2><br>
           </div>
         </div>
       </div>

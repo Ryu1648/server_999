@@ -27,7 +27,7 @@
       <div class="jumbotron text-center center-block" style="max-width:1000px">
         <div class="row">
           <h2>
-            Welcome to Deadline!
+            Welcome to Deadline Management!
           </h2>
           <br>
           <p>
@@ -47,16 +47,16 @@
 
 
       <div class="btn-group btn-group-justified" role="group">
-        <form class="form-inline text-center" action="login_error.php" method="get">
+        <form class="form-inline text-center" action="mypage.php" method="get">
 
           <div class="form-group">
             <label class="sr-only" for="uName">ユーザー名</label>
-            <input type="text" class="form-control" placeholder="ユーザー名" id="uName" size="16">
+            <input type="text" name='name' class="form-control" placeholder="ユーザー名" id="uName" size="16">
           </div>
 
           <div class="form-group">
             <label class="sr-only" for="pass">パスワード</label>
-            <input type="password" class="form-control" placeholder="パスワード" id="pass" size="16">
+            <input type="password" name='password' class="form-control" placeholder="パスワード" id="pass" size="16">
           </div>
 
           <button type="submit"  class="btn btn-success" role="button">ログイン</button>

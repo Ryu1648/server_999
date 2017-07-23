@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -19,6 +23,23 @@
     <![endif]-->
   </head>
   <body>
+
+<?php
+$name = $_GET['name'];
+$password = $_GET['password'];
+
+$_SESSION['name'] = $name;
+?>
+
+<?php
+condition = Null
+if (condition) {
+  $url = 'http://133.2.176.112/login_error.php'
+  header("Location:" . $url);
+}
+?>
+
+
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -29,7 +50,7 @@
         <span class="icon-bar"></span>
       </button>
       <!-- このaタグはFlaskでどこに飛ぶのか？ -->
-      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
+      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "<?php echo $name ?>"さん</a>
 
     </div>
 
@@ -60,7 +81,7 @@
     </div>
   </div>
 
-  <div class="container-fluid" style="max-width: 1000px;">
+  <!-- <div class="container-fluid" style="max-width: 1000px;">
     <section>
       <h2>次の締め切り：{% if title_deadline %}{{ title_deadline[0][0] }}{% endif %}</h2>
       <h2>残り：{% if title_deadline %}{{ deadline_date[0][1] }}{% endif %}</h2>
@@ -70,37 +91,37 @@
     <br><br>
 
     <div class="container-fluid" style="max-width: 1000px;">
-      <div class="panel-group" id="ac1">
+      <div class="panel-group" id="ac1"> -->
 
       <!-- データを受け取る部分 -->
       <!-- deadline_IDは個人データのカラム数 -->
-      {% for value in deadline_ID %}
+      <!-- {% for value in deadline_ID %}
         <div class="panel panel-warning">
           <div class="panel-heading">
             <h3 class="panel-title">
-              <a data-toggle="collapse" data-parent="#ac1" href="#'{{ value[0] }}'">
+              <a data-toggle="collapse" data-parent="#ac1" href="#'{{ value[0] }}'"> -->
               <!-- <a data-toggle="collapse" data-parent="#ac1" href="#24"> -->
 
                 <!-- 時間 -->
-                {{ value[2] }},
+                <!-- {{ value[2] }}, -->
                 <!-- タイトル -->
-                {{ value[1] }}
-              </a>
+                <!-- {{ value[1] }} -->
+              <!-- </a>
             </h3>
           </div>
 
-          <div id='{{ value[0] }}'class="panel-collapse collapse">
+          <div id='{{ value[0] }}'class="panel-collapse collapse"> -->
           <!-- <div id="24"　class="panel-collapse collapse "> -->
-            <div class="panel-body">
+            <!-- <div class="panel-body"> -->
               <!-- メモ -->
-              {{ value[2] }}
+              <!-- {{ value[2] }} -->
               <!-- <p>こんにちは</p> -->
-            </div>
+            <!-- </div>
           </div>
         </div>
             {% endfor %}
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 
 
       <div class="container-fluid">

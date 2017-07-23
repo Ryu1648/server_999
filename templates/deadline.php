@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -23,6 +27,10 @@
   </head>
   <body>
 
+<?php
+$name = $_SESSION['name'];
+?>
+
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -33,7 +41,7 @@
         <span class="icon-bar"></span>
       </button>
       <!-- このaタグはFlaskでどこに飛ぶのか？ -->
-      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
+      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "<?php echo $name; ?>"さん</a>
 
     </div>
 
@@ -97,11 +105,11 @@
     <label class="control-label help-block">※対象を全て選択してください</label>
     <br>
     <div>
-      <div class="checkbox-inline"><label><input type="checkbox" name="alert1" value="1">１週間前</label></div>
-      <div class="checkbox-inline"><label><input type="checkbox" name="alert2" value="2">３日前</label></div>
-      <div class="checkbox-inline"><label><input type="checkbox" name="alert3" value="3">１日前</label></div>
-      <div class="checkbox-inline"><label><input type="checkbox" name="alert4" value="4">１２時間前</label></div>
-      <div class="checkbox-inline"><label><input type="checkbox" name="alert5" value="5">２時間前</label></div>
+      <div class="checkbox-inline"><label><input type="checkbox" name="alert[]" value="1">１週間前</label></div>
+      <div class="checkbox-inline"><label><input type="checkbox" name="alert[]" value="2">３日前</label></div>
+      <div class="checkbox-inline"><label><input type="checkbox" name="alert[]" value="3">１日前</label></div>
+      <div class="checkbox-inline"><label><input type="checkbox" name="alert[]" value="4">１２時間前</label></div>
+      <div class="checkbox-inline"><label><input type="checkbox" name="alert[]" value="5">２時間前</label></div>
     </div>
   </div>
 </div>

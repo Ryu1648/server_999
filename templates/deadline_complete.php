@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -20,8 +24,12 @@
     <![endif]-->
   </head>
 
-
   <body>
+
+<?php
+$name = $_SESSION['name'];
+?>
+
 
     <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -32,7 +40,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "{{ request.cookies.get('name') }}"さん</a>
+      <a class="navbar-brand active" href="mypage.php">Welcome to DeadLine "<?php echo $name; ?>"さん</a>
 
     </div>
 

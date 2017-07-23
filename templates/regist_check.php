@@ -25,6 +25,13 @@ $name = $_POST['name'];
 $password = $_POST['password'];
 $email = $_POST['email'];
 ?>
+<?php
+if (!isset($name) or !isset($password) or !isset($email)) {
+  $url = "http://133.2.176.112/regist_error.php";
+  header('Location:'.$url);
+  exit();
+}
+?>
 
 
     <br><br>

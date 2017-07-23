@@ -35,6 +35,13 @@ $title = $_GET['title'];
 $deadline = $_GET['deadline'];
 $memo = $_GET['memo'];
 ?>
+<?php
+if (empty($title) or empty($deadline) or empty($memo)) {
+  $url = "http://133.2.176.112/deadline_error.php";
+  header('Location:'.$url);
+  exit();
+}
+?>
 
 
 <!-- データベースに接続するための基本情報 -->

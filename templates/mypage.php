@@ -78,7 +78,7 @@ $_SESSION['name'] = $name;
 <?php
   $user = 'root';
   $password = 'password';
-  $dbName = 'server_built';
+  $dbName = 'server';
   $host = 'localhost';
   $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
 ?>

@@ -41,9 +41,9 @@ $email = $_POST['email']
     $pdo = new PDO($dsn, $user, $db_password);
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo $name;
-    echo $password;
-    echo $email
+    echo $name,"<br>";
+    echo $password,"<br>";
+    echo $email,"<br>";
     $sql = "insert users (name,password,email) values ($name,$password,$email)";
     $stm = $pdo -> prepare($sql);
     $stm -> execute();

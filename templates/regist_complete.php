@@ -41,10 +41,6 @@ $email = $_POST['email']
     $pdo = new PDO($dsn, $user, $db_password);
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo $name,"<br>";
-    echo $password,"<br>";
-    echo $email,"<br>";
-    // $email = 'test_code';
     $sql = "insert users (name,password,email) values ('$name','$password','$email')";
     $stm = $pdo -> prepare($sql);
     $stm -> execute();
@@ -75,6 +71,7 @@ $email = $_POST['email']
     <div class="container text-center" style="max-width:800px">
       <div class="row">
         <form action="mypage.php" method="get">
+          <input type="hidden" name="name" value="<?php echo $name; ?>">
           <button type="submit" class="btn btn-success btn-lg btn-block" style="font-size:25px;height:70px;border-radius:0;">
             マイページへ</button>
         </form>

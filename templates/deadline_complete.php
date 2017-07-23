@@ -39,10 +39,10 @@ $memo = $_GET['memo'];
 
 <!-- データベースに接続するための基本情報 -->
 <?php
-  $user = 'tanai';
+  $user = 'root';
   $password = 'password';
-  $dbName = 'server_built';
-  $host = '133.2.176.112';
+  $dbName = 'server';
+  $host = 'localhost';
   $dsn = 'mysql:host={$host};dbname={$dbName};charset=utf8';
 ?>
 <!-- データベースへの接続とその操作 -->
@@ -51,9 +51,7 @@ $memo = $_GET['memo'];
     $pdo = new PDO($dsn, $user, $password);
     $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "データベース{$dbName}に接続しました。","<br>";
-    // 実行するSQL
-    $sql = "insert layout(name,title,deadline,memo) values($name,$title,$deadline,$memo)";
+    $sql = "insert layout(name,title,deadline,memo) values('$name','$title','$deadline','$memo')";
     $stm = $pdo -> prepare(%sql);
     $stm -> execute();
 

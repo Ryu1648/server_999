@@ -93,7 +93,7 @@ $_SESSION['name'] = $name;
     // $stm = $pdo -> prepare($sql);
     // $stm -> execute();
     // $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
-
+    //
     // foreach ($result as $row){
     //   echo $row['number'],"<br>";
     //   echo $row['title'],"<br>";

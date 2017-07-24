@@ -1,4 +1,3 @@
-# linuxサーバーの cron から１時間に１回起動するプログラム
 
 # データベースに関するモジュール
 import pymysql.cursors
@@ -9,9 +8,9 @@ import datetime
 # データベースに接続
 connection = pymysql.connect(
     host='localhost',
-    user='zemi_player',
-    password='zemipass',
-    db='server_built',
+    user='root',
+    password='password',
+    db='server',
     charset='utf8',
     )
 
@@ -25,7 +24,7 @@ now += ':00:00'
 
 # データベースのlayoutにある古いデータを削除する
 with connection.cursor() as cursor:
-    sql = 'delete from layout where deadline <= "{}"'.format_map(now)
+    sql = 'delete from layout where deadline <= "{}"'.format(now)
     cursor.execute(sql)
     connection.commit()
 
@@ -57,15 +56,13 @@ text = '''
 From: deadline_alert@example.com
 To: {0}
 Subject: Your deadline is approaching!
-Content-Type: text/plain;charset="UTF-8"
-Content-Transfer-Encoding: base64
 
 Are you ready?
-{1}
-{2}
+Your deadline is approaching!
 '''
 for i in mail_list:
-    text = text.format(i[2],i[1],i[4])
+    # text = text.format(i[2],i[1],i[4])
+    text = text.format('r21272127@yahoo.co.jp')
     file_txt = '{0}.txt'.format(i[0])
     with open(file_txt,'w',encoding='utf-8') as fileobj:
         fileobj.write(text)

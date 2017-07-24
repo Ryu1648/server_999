@@ -86,6 +86,7 @@ else {
   $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
 ?>
 <!-- データベースへの接続とその操作 -->
+<div class="jumbotron">
 <?php
   try {
     $pdo = new PDO($dsn, $user, $password);
@@ -96,7 +97,6 @@ else {
     $stm -> execute();
     $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
 
-    <div class="jumbotron">
     // レイアウトの修正
     foreach ($result as $row){
       echo $row['title'],"<br>";
@@ -111,8 +111,8 @@ else {
     echo $e -> getMessage();
     exit();
   }
-  </div>
 ?>
+</div>
 
 
 

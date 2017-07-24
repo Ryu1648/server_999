@@ -64,6 +64,13 @@ $memo = $_GET['memo'];
 ?>
 
 
+<!-- 時間に関する処理 -->
+<?php
+$now_date = date("Y-m-d H:i:s")
+echo $now_date;
+
+?>
+
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">

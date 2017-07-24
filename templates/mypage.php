@@ -75,7 +75,7 @@ else {
     <div class="jumbotron" style="background-color:brown; color: white;">
       <h2>ここは"<?php echo $name ?>"さんのマイページです</h2>
     </div>
-  </div>
+
 
 <!-- データベースに接続するための基本情報 -->
 <?php
@@ -96,6 +96,7 @@ else {
     $stm -> execute();
     $result = $stm -> fetchAll(PDO::FETCH_ASSOC);
 
+    <div class="jumbotron">
     // レイアウトの修正
     foreach ($result as $row){
       echo $row['title'],"<br>";
@@ -110,6 +111,7 @@ else {
     echo $e -> getMessage();
     exit();
   }
+  </div>
 ?>
 
 
@@ -158,7 +160,7 @@ else {
             {% endfor %}
     </div> -->
   <!-- </div> -->
-
+</div>
 
       <div class="container-fluid">
         <div class="row">
